@@ -25,14 +25,13 @@ class CalculatorViewModel @JvmOverloads constructor(
 
 
     fun calculateTip() {
-        Log.d(TAG, "calculateTip Invoked")
 
         // convert to numbers
         val checkAmount = inputCheckAmount.toDouble()
         val tipPct = inputTipPercentage.toIntOrNull()
 
         if (checkAmount != null && tipPct != null) {
-            Log.d(TAG, "CheckAmount: $checkAmount, TipPercentage: $tipPct")
+
             updateOutputs(calculator.calculateTip(checkAmount, tipPct))
             notifyChange()
 
